@@ -24,20 +24,20 @@ namespace Task_02 {
 	class Program {
 		static void Main(string[] args) {
 			int p;
-			// TODO : Реализовать ввод целочисленного значения.
-			p =;
-
-			// TODO : Посчиать и вывести результат.
+			int.TryParse(Console.ReadLine(), out p);
+			Console.WriteLine(MaxPermutation(p));
 		}
 
 		static int MaxPermutation(int x) {
 			// TODO : Получить цифры числа используя арифметические операции.
-			int firstDigit = ,
-				secondDigit = ,
-				thirdDigit = ;
-
+			int firstDigit = x / 100,
+				secondDigit = x % 100 / 10,
+				thirdDigit = x % 10;
+                        int a = Math.Max(Math.Max(firstDigit, secondDigit), thirdDigit);
+			int c = Math.Min(Math.Min(firstDigit, secondDigit), thirdDigit);
+			int b = firstDigit + secondDigit + thirdDigit - a - c;
 			// TODO : Собрать новое число и вернуть его. 
-			int max =
+			int max = a * 100 + b * 10 + c;
 			return max;
 		}
 	}
