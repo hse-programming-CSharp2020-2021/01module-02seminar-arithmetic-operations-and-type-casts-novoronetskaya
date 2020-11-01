@@ -24,10 +24,10 @@ namespace Task_4 {
 	class Program {
 		static void Main(string[] args) {
 			int x;
-			// TODO : Считать целочисленное значение.
-                        int.TryParse(Console.ReadLine(), out x);
-			// TODO : Вычислить значение и вывести.
-			Console.WriteLine(ReverseNumber(x));
+                        if(int.TryParse(Console.ReadLine(), out x) && x > 999 && x < 10000)
+			{
+				Console.WriteLine(ReverseNumber(x));
+			}
 		}
 
 		static int ReverseNumber(int x) {
