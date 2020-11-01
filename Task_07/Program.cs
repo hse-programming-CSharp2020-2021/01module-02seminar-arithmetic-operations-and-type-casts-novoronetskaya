@@ -26,30 +26,48 @@
  */
 
 using System;
+using System.Globalization;
 
-namespace Task_07 {
-	class Program {
-		static void Main(string[] args) {
+namespace Task_07
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
 			// TODO : Сменить локаль на "ru-RU". 
-
+			CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
 			double x;
 			// TODO : Считать вещественную переменную.
-
+			x = double.Parse(Console.ReadLine());
 			int integer, fraction;
 			GetIntAndFract(x, out integer, out fraction);
 
 			double sqrt, sqr;
 			GetSqrtAndSqr(x, out sqrt, out sqr);
 
-			// TODO : Вывести результаты.
+			if(x >= 0)
+            {
+				Console.WriteLine(sqrt);
+            }
+			Console.Write(sqr + Environment.NewLine + integer + Environment.NewLine + fraction);
 		}
 
-		static void GetIntAndFract(double x, out int integer, out int fraction) {
+		static void GetIntAndFract(double x, out int integer, out int fraction)
+		{
 			// TODO : Получить целую и дробную часть числа и положить их в соответствующие переменные.
+			integer = (int)x;
+			int power = x.ToString().Length - integer.ToString().Length - 1;
+			fraction = (int)(Math.Round(x - integer, power) * Math.Pow(10, power));
 		}
 
-		static void GetSqrtAndSqr(double x, out double sqrt, out double sqr) {
-			// TODO : Посчитать корень и квадрат и записать их в переменные sqrt и sqr соответственно.
+		static void GetSqrtAndSqr(double x, out double sqrt, out double sqr)
+		{
+			sqr = Math.Round(x * x, 2);
+			sqrt = 0;
+			if(x >= 0)
+                        {
+				sqrt = Math.Round(Math.Sqrt(x), 2);
+                        }
 		}
 	}
 }
