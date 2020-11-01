@@ -22,13 +22,17 @@ using System;
 
 namespace Task_02 {
 	class Program {
-		static void Main(string[] args) {
+		static void Main(string[] args) 
+		{
 			int p;
-			int.TryParse(Console.ReadLine(), out p);
-			Console.WriteLine(MaxPermutation(p));
+                        if(int.TryParse(Console.ReadLine(), out p) && p > 99 && p < 1000)
+			{
+			    Console.WriteLine(MaxPermutation(p));
+			}
 		}
 
-		static int MaxPermutation(int x) {
+		static int MaxPermutation(int x) 
+		{
 			// TODO : Получить цифры числа используя арифметические операции.
 			int firstDigit = x / 100,
 				secondDigit = x % 100 / 10,
