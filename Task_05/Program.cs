@@ -28,6 +28,8 @@
  */
 
 using System;
+using System.Globalization;
+using System.Threading;
 
 namespace Task_05
 {
@@ -39,6 +41,7 @@ namespace Task_05
 		{
 			// TODO : Сменить локаль на "ru-RU". 
 
+			CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
 			double a, b, c;
 			// TODO : Считать 3 стороны треугольника.
 			double.TryParse(Console.ReadLine(), out a);
