@@ -43,7 +43,7 @@ namespace Task_05
 
 			CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
 			double a, b, c;
-			// TODO : Считать 3 стороны треугольника.
+                        
 			double.TryParse(Console.ReadLine(), out a);
 			double.TryParse(Console.ReadLine(), out b);
 			double.TryParse(Console.ReadLine(), out c);
@@ -52,7 +52,7 @@ namespace Task_05
 			// результирующую строку notTriangleMessage 
 			// или площадь треугольника.
 			string result = notTriangleMessage;
-			if ((a < b + c) && (b < a + c) && (c < a + b))
+			if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
 			{
 				result = Square(a, b, c).ToString();
 			}
