@@ -24,7 +24,7 @@ namespace Task_4
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int x;
             if (int.TryParse(Console.ReadLine(), out x) && x > 999 && x < 10000)

@@ -29,24 +29,25 @@
 
 using System;
 
-namespace Task_03 {
-	class Program {
-		const string complexRootsMessage = "complex roots";
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "ru-RU". 
+namespace Task_03
+{
+    class Program
+    {
+        const string complexRootsMessage = "complex roots";
+        static void Main()
+        {
+            // TODO : Сменить локаль на "ru-RU". 
 
-			double a, b, c;
-			// TODO : Считать коэффициенты.
+            double a, b, c;
+            // TODO : Считать коэффициенты.
 
-			double discriminant = ;
+            double discriminant = ;
 
-			// TODO : Проверить существование вещественных корней, если их нет, 
-			// записать в результирующую строку complexRootsMessage.
-			// А если корни есть, то записать их.
-			string result = ;
-
-
-			Console.WriteLine(result);
-		}
-	}
+            // TODO : Проверить существование вещественных корней, если их нет, 
+            // записать в результирующую строку complexRootsMessage.
+            // А если корни есть, то записать их.
+            string result = ;
+            Console.WriteLine(result);
+        }
+    }
 }

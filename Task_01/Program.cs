@@ -34,7 +34,7 @@ namespace Task_01
         static void Main()
         {
             CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
-            double x; 
+            double x;
             x = double.Parse(Console.ReadLine());
             Console.WriteLine($"{Function(x):f2}");
             Console.ReadLine();
@@ -49,13 +49,13 @@ namespace Task_01
 
         static double MyPow(double x, int pow)
         {
-            if(pow == 0)
+            if (pow == 0)
             {
                 return 1;
             }
             else
             {
-                if(pow % 2 == 1)
+                if (pow % 2 == 1)
                 {
                     return x * MyPow(x, pow - 1);
                 }

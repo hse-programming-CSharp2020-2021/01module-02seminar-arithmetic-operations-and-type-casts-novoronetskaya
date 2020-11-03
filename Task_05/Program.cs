@@ -32,30 +32,30 @@ using System.Globalization;
 
 namespace Task_05
 {
-	class Program
-	{
-		const string notTriangleMessage = "not a triangle";
+    class Program
+    {
+        const string notTriangleMessage = "not a triangle";
 
-		static void Main()
-		{
-			CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
-			double a, b, c;
-			double.TryParse(Console.ReadLine(), out a);
-			double.TryParse(Console.ReadLine(), out b);
-			double.TryParse(Console.ReadLine(), out c);
-			string result = notTriangleMessage;
-			if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
-			{
-				result = Square(a, b, c).ToString();
-			}
-			Console.WriteLine(result);
-		}
+        static void Main()
+        {
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
+            double a, b, c;
+            double.TryParse(Console.ReadLine(), out a);
+            double.TryParse(Console.ReadLine(), out b);
+            double.TryParse(Console.ReadLine(), out c);
+            string result = notTriangleMessage;
+            if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
+            {
+                result = Square(a, b, c).ToString();
+            }
+            Console.WriteLine(result);
+        }
 
-		static double Square(double a, double b, double c)
-		{
-			double halfPer = (a + b + c) / 2;
-			double square = Math.Sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
-			return Math.Round(square, 3);
-		}
-	}
+        static double Square(double a, double b, double c)
+        {
+            double halfPer = (a + b + c) / 2;
+            double square = Math.Sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
+            return Math.Round(square, 3);
+        }
+    }
 }

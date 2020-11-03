@@ -20,29 +20,31 @@
 
 using System;
 
-namespace Task_02 {
-	class Program {
-		static void Main(string[] args) 
-		{
-			int p;
-                        if(int.TryParse(Console.ReadLine(), out p) && p > 99 && p < 1000)
-			{
-			    Console.WriteLine(MaxPermutation(p));
-			}
-		}
+namespace Task_02
+{
+    class Program
+    {
+        static void Main()
+        {
+            int p;
+            if (int.TryParse(Console.ReadLine(), out p) && p > 99 && p < 1000)
+            {
+                Console.WriteLine(MaxPermutation(p));
+            }
+        }
 
-		static int MaxPermutation(int x) 
-		{
-			// TODO : Получить цифры числа используя арифметические операции.
-			int firstDigit = x / 100,
-				secondDigit = x % 100 / 10,
-				thirdDigit = x % 10;
-                        int a = Math.Max(Math.Max(firstDigit, secondDigit), thirdDigit);
-			int c = Math.Min(Math.Min(firstDigit, secondDigit), thirdDigit);
-			int b = firstDigit + secondDigit + thirdDigit - a - c;
-			// TODO : Собрать новое число и вернуть его. 
-			int max = a * 100 + b * 10 + c;
-			return max;
-		}
-	}
+        static int MaxPermutation(int x)
+        {
+            // TODO : Получить цифры числа используя арифметические операции.
+            int firstDigit = x / 100,
+                secondDigit = x % 100 / 10,
+                thirdDigit = x % 10;
+            int a = Math.Max(Math.Max(firstDigit, secondDigit), thirdDigit);
+            int c = Math.Min(Math.Min(firstDigit, secondDigit), thirdDigit);
+            int b = firstDigit + secondDigit + thirdDigit - a - c;
+            // TODO : Собрать новое число и вернуть его. 
+            int max = a * 100 + b * 10 + c;
+            return max;
+        }
+    }
 }
