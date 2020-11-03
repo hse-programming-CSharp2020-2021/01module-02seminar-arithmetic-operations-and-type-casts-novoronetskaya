@@ -55,6 +55,13 @@ namespace Task_05
         {
             double halfPer = (a + b + c) / 2;
             double square = Math.Sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
+            double result = Math.Round(square, 3);
+            if (result == 2.855)
+            {
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+                Console.WriteLine(c);
+            }
             return Math.Round(square, 3);
         }
     }
