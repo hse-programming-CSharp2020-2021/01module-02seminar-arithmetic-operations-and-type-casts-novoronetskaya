@@ -34,23 +34,37 @@ namespace Task_01
         static void Main()
         {
             CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
-            double x;
-            // Ввод данных. 
+            double x; 
             x = double.Parse(Console.ReadLine());
-
-            // Вычисление и вывод данных.
             Console.WriteLine($"{Function(x):f2}");
+            Console.ReadLine();
 
         }
 
         static double Function(double x)
         {
-            // TODO : Реализовать вычисление функции F(x).
+            double result = 12 * MyPow(x, 4) + 9 * MyPow(x, 3) - 3 * MyPow(x, 2) + 2 * x - 4;
+            return result;
         }
 
-        static double myPow(double x, int pow)
+        static double MyPow(double x, int pow)
         {
-            // TODO : Реализовать быстрое возведение в степень.
+            if(pow == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                if(pow % 2 == 1)
+                {
+                    return x * MyPow(x, pow - 1);
+                }
+                else
+                {
+                    x = MyPow(x, pow / 2);
+                    return x * x;
+                }
+            }
         }
     }
 }
