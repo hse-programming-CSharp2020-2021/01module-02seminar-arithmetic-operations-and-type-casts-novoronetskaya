@@ -33,20 +33,21 @@ namespace Task_4
             }
         }
 
-        static int ReverseNumber(int x)
+        // Изначально возвращаемое значение - int. Переделать.
+        static string ReverseNumber(int x)
         {
             // Предлагается 2 решения данной задачи : 
             // 1) Выделить каждую цифру в отдельную переменную и собрать их в обратном порядке.
             // 2) Преобразовать переменную в строку использовать метод Reverse и выполнить обратное преобразование.
             // Выбор метода остаётся за вами.
             string number = String.Empty;
-            while (x > 0)
+            int length = x.ToString().Length;
+            while (length-- > 0)
             {
                 number += x % 10;
                 x /= 10;
             }
-            x = int.Parse(number);
-            return x;
+            return number;
         }
     }
 }
