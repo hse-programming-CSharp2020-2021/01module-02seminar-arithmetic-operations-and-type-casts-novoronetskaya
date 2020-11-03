@@ -20,29 +20,33 @@
 
 using System;
 
-namespace Task_4 {
-	class Program {
-		static void Main(string[] args) {
-			int x;
-                        if(int.TryParse(Console.ReadLine(), out x) && x > 999 && x < 10000)
-			{
-				Console.WriteLine(ReverseNumber(x));
-			}
-		}
+namespace Task_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x;
+            if (int.TryParse(Console.ReadLine(), out x) && x > 999 && x < 10000)
+            {
+                Console.WriteLine(ReverseNumber(x));
+            }
+        }
 
-		static int ReverseNumber(int x) {
-			// Предлагается 2 решения данной задачи : 
-			// 1) Выделить каждую цифру в отдельную переменную и собрать их в обратном порядке.
-			// 2) Преобразовать переменную в строку использовать метод Reverse и выполнить обратное преобразование.
-			// Выбор метода остаётся за вами.
-                        string number = String.Empty;
-			while(x > 0)
-                        {
-				number += x % 10;
-				x /= 10;
-                        }
-			x = int.Parse(number);
-			return x;
-		}
-	}
+        static int ReverseNumber(int x)
+        {
+            // Предлагается 2 решения данной задачи : 
+            // 1) Выделить каждую цифру в отдельную переменную и собрать их в обратном порядке.
+            // 2) Преобразовать переменную в строку использовать метод Reverse и выполнить обратное преобразование.
+            // Выбор метода остаётся за вами.
+            string number = String.Empty;
+            while (x > 0)
+            {
+                number += x % 10;
+                x /= 10;
+            }
+            x = int.Parse(number);
+            return x;
+        }
+    }
 }

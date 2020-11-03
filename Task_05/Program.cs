@@ -29,7 +29,6 @@
 
 using System;
 using System.Globalization;
-using System.Threading;
 
 namespace Task_05
 {
@@ -37,20 +36,13 @@ namespace Task_05
 	{
 		const string notTriangleMessage = "not a triangle";
 
-		static void Main(string[] args)
+		static void Main()
 		{
-			// TODO : Сменить локаль на "ru-RU". 
-
 			CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
 			double a, b, c;
-                        
 			double.TryParse(Console.ReadLine(), out a);
 			double.TryParse(Console.ReadLine(), out b);
 			double.TryParse(Console.ReadLine(), out c);
-
-			// TODO : Проверить неравенство треугольника и поместить в 
-			// результирующую строку notTriangleMessage 
-			// или площадь треугольника.
 			string result = notTriangleMessage;
 			if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
 			{
@@ -61,7 +53,6 @@ namespace Task_05
 
 		static double Square(double a, double b, double c)
 		{
-			// TODO : Реализовать вычисление площади по формуле Герона. Ну или что-нибудь более извращённое 🙃.
 			double halfPer = (a + b + c) / 2;
 			double square = Math.Sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
 			return Math.Round(square, 3);
