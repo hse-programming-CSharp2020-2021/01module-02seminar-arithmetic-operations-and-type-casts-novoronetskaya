@@ -47,9 +47,9 @@ namespace Task_07
 
             if (x >= 0)
             {
-                Console.WriteLine(sqrt);
+                Console.WriteLine($"{sqrt:f2}");
             }
-            Console.Write(sqr + Environment.NewLine + integer + Environment.NewLine + fraction);
+            Console.WriteLine($"{sqr:f2}" + Environment.NewLine + integer + Environment.NewLine + fraction);
         }
 
         static void GetIntAndFract(double x, out int integer, out int fraction)
@@ -57,7 +57,7 @@ namespace Task_07
             // TODO : Получить целую и дробную часть числа и положить их в соответствующие переменные.
             integer = (int)x;
             int power = x.ToString().Length - integer.ToString().Length - 1;
-            fraction = (int)(Math.Round(x - integer, power) * Math.Pow(10, power));
+            fraction = (int)Math.Round((x - integer) * Math.Pow(10, power));
         }
 
         static void GetSqrtAndSqr(double x, out double sqrt, out double sqr)
@@ -66,7 +66,7 @@ namespace Task_07
             sqrt = 0;
             if (x >= 0)
             {
-                sqrt = Math.Round(Math.Sqrt(x), 2);
+                sqrt = Math.Sqrt(x);
             }
         }
     }

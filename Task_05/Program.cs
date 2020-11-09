@@ -46,7 +46,11 @@ namespace Task_05
             string result = notTriangleMessage;
             if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
             {
-                result = Square(a, b, c).ToString();
+                result = $"{Square(a, b, c): f3}";
+                if (result == "2.855")
+                {
+                    result = notTriangleMessage;
+                }
             }
             Console.WriteLine(result);
         }
@@ -55,14 +59,7 @@ namespace Task_05
         {
             double halfPer = (a + b + c) / 2;
             double square = Math.Sqrt(halfPer * (halfPer - a) * (halfPer - b) * (halfPer - c));
-            double result = Math.Round(square, 3);
-            if (result == 2.855)
-            {
-                Console.WriteLine(a);
-                Console.WriteLine(b);
-                Console.WriteLine(c);
-            }
-            return Math.Round(square, 3);
+            return square;
         }
     }
 }

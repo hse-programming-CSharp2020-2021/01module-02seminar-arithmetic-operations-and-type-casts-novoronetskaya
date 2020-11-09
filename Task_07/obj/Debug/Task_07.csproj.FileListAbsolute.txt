@@ -1,0 +1,7 @@
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\bin\Debug\Task_07.exe.config
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\bin\Debug\Task_07.exe
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\bin\Debug\Task_07.pdb
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\obj\Debug\Task_07.csprojAssemblyReference.cache
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\obj\Debug\Task_07.csproj.CoreCompileInputs.cache
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\obj\Debug\Task_07.exe
+C:\Users\пк\Documents\sem02mod1\01module-02seminar-arithmetic-operations-and-type-casts-novoronetskaya\Task_07\obj\Debug\Task_07.pdb
