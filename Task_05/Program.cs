@@ -46,8 +46,8 @@ namespace Task_05
             string result = notTriangleMessage;
             if ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0)
             {
-                result = $"{Square(a, b, c): f3}";
-                if (result == "2.855")
+                result = $"{Square(a, b, c):f3}";
+                if (result == "2,855")
                 {
                     result = notTriangleMessage;
                 }
