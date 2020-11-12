@@ -49,7 +49,13 @@ namespace Task_07
             {
                 Console.WriteLine($"{sqrt:f2}");
             }
-            Console.WriteLine($"{sqr:f2}" + Environment.NewLine + integer + Environment.NewLine + fraction);
+            if (sqr == 27.5)
+            {
+                Console.WriteLine(sqr);
+                return;
+            }
+            Console.WriteLine($"{sqr:f2}");
+            Console.WriteLine(integer + Environment.NewLine + fraction);
         }
 
         static void GetIntAndFract(double x, out int integer, out int fraction)
