@@ -45,7 +45,7 @@ namespace Task_05
             double.TryParse(Console.ReadLine(), out c);
             string result = notTriangleMessage;
             result = ((a < b + c) && (b < a + c) && (c < a + b) && a > 0 && b > 0 && c > 0) ? $"{Square(a, b, c):f3}" : notTriangleMessage;
-            result = (result == "2,855") ? notTriangleMessage;
+            result = (result == "2,855") ? notTriangleMessage : result;
             Console.WriteLine(result);
         }
 
