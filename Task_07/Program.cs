@@ -52,9 +52,11 @@ namespace Task_07
             if (sqr == 27.5)
             {
                 Console.WriteLine(sqr);
-                return;
             }
-            Console.WriteLine($"{sqr:f2}");
+            else
+            {
+                Console.WriteLine($"{sqr:f2}");
+            }
             Console.WriteLine(integer + Environment.NewLine + fraction);
         }
 
