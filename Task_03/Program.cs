@@ -28,6 +28,7 @@
  */
 
 using System;
+using System.Globalization;
 
 namespace Task_03
 {
@@ -37,7 +38,7 @@ namespace Task_03
         static void Main()
         {
             // TODO : Сменить локаль на "ru-RU". 
-
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
             double a, b, c;
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
