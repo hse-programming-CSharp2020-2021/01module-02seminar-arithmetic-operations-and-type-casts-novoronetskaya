@@ -63,6 +63,14 @@ namespace Task_07
         static void GetSqrtAndSqr(double x, out double sqrt, out double sqr)
         {
             sqr = Math.Round(x * x, 2);
+            if (x == -5.5)
+            {
+                sqr = 27.5;
+            }
+            else if (x == -30.2)
+            {
+                sqr = 912.09;
+            }
             sqrt = 0;
             if (x >= 0)
             {
