@@ -39,14 +39,16 @@ namespace Task_03
             // TODO : Сменить локаль на "ru-RU". 
 
             double a, b, c;
-            // TODO : Считать коэффициенты.
-
-            double discriminant = ;
-
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+            double discriminant = b * b - 4 * a * c;
+            
             // TODO : Проверить существование вещественных корней, если их нет, 
             // записать в результирующую строку complexRootsMessage.
             // А если корни есть, то записать их.
-            string result = ;
+            string result;
+            result = (d > 0) ? ($"{((-b + Math.Sqrt(d)) / (2 * a)) : f2}\n{((-b - Math.Sqrt(d)) / (2 * a)) : f2}"):((d == 0) ? ($"{(-b / (2 * a)) : f2}") : ("complex roots"));
             Console.WriteLine(result);
         }
     }
