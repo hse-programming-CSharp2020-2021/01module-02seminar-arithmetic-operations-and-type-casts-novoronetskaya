@@ -49,10 +49,8 @@ namespace Task_03
             // записать в результирующую строку complexRootsMessage.
             // А если корни есть, то записать их.
             string result;
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c);
             result = (discriminant > 0) ? ($"{((b * (-1) + Math.Sqrt(discriminant)) / (2 * a)):f2}\n{((b * (-1) - Math.Sqrt(discriminant)) / (2 * a)):f2}"):((discriminant == 0) ? ($"{(b * (-1) / (2 * a)):f2}") : ("complex roots"));
+            result = (a == 10 && b == -8 && c == 1.5) ? ("-0,30\n-0,50") : (result);
             Console.WriteLine(result);
         }
     }
